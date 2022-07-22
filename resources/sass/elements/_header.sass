@@ -1,0 +1,388 @@
+header
+    position: sticky
+    top: 0
+    z-index: 100
+    @media screen and (min-width: 1024px)
+        // padding: 0 100px
+
+    .header
+        height: 140px
+        width: 100%
+        display: flex
+        flex-direction: column
+        background-color: white
+        padding: 20px 45px
+        @media screen and (max-width: 1024px)
+            height: auto
+            padding: 20px 15px
+
+
+    nav
+        display: flex
+        justify-content: space-around
+        margin: 0 auto
+        @media screen and (max-width: 1024px)
+            display: none
+        a
+            color: black
+            font-size: 17px
+            margin: auto 0
+            white-space: nowrap
+
+            &:first-child
+                margin-left: auto
+
+            &:not(:last-of-type)
+                margin-right: 40px
+            &:hover
+                opacity: .7
+        .currency-select
+            margin-left: auto
+            display: flex
+            align-items: center
+            select
+                margin-left: 5px
+                border: none
+        .language-select
+            margin-left: auto
+            display: flex
+            align-items: center
+            select
+                margin-left: 5px
+                border: none
+
+    .header__color-wrap
+        background-color: #f6ebe4
+        font-size: 23px
+        color: #333
+    .header__tabs
+        display: flex
+        justify-content: space-evenly
+        flex-wrap: wrap
+        a
+            padding: 10px 20px
+            text-align: center
+        .asctive-tab //Класс для активной вкладки
+            background-color: #e1bba5
+            color: #8C3E7D
+            min-width: 200px
+
+
+    .header__sticky-bar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        padding: 20px 0
+        background-color: #fff
+        .logo
+            width: 24%
+            min-width: 160px
+            margin-right: 1%
+            display: block
+            @media screen and (max-width: 1024px)
+                min-width: 50px
+                width: auto
+
+            img
+                width: 100%
+        .search-bar
+            width: 100%
+            position: relative
+            &::after
+                position: absolute
+                content: ''
+                width: 28px
+                height: 30px
+                background-image: url(../img/images/icons/icon_search.svg)
+                background-repeat: no-repeat
+                right: 10px
+                top: 10px
+        input[type=search]
+            color: $brown
+            border: 3px solid $brown
+            border-radius: 0px 15px 15px 0px
+            font-size: 21px
+            line-height: 25px
+            min-height: 50px
+            padding: 0 10px
+            outline: none
+            width: 100%
+            &::placeholder
+                color: $brown
+
+        .header__bottom-bar
+            display: flex
+            gap: 10px
+            padding: 0 10px
+            @media screen and (max-width: 1024px)
+                position: fixed
+                //top: calc(100% - 60px)
+                bottom: 0
+                background-color: white
+                width: 100%
+                height: 67px
+                justify-content: space-between
+                padding: 10px 15px
+                left: 0
+
+        .mobile-catalog-button
+            display: none
+            @media screen and (max-width: 1024px)
+                display: block
+
+        .favorite
+            min-width: 50px
+            height: 50px
+            border: 1px solid $grey
+            border-radius: 25px
+            background-color: #fff
+            border-color: #BDBDBD
+            border-radius: 50%
+            padding: 14px 9px 11px 11px
+            margin: 0 2%
+            @media screen and (max-width: 1024px)
+                border: none
+            @media screen and (max-width: 1440px)
+                height: 40px
+                width: 40px
+                padding: 0
+                min-width: 40px
+                svg
+                    display: block
+                    margin: auto auto
+                    margin-top: 25%
+                    height: 18px
+                    width: 20px
+            svg
+                fill: white
+                stroke: #757575
+                @media screen and (max-width: 1024px)
+                    width: 32px
+                    height: 35px
+                    margin-top: 0
+
+            &:hover
+                background-color: $brown
+                border-color: $blue
+                @media screen and (max-width: 1024px)
+                    border: none
+                    background-color: white
+                svg
+                    fill: $blue
+                    stroke: $blue
+
+        .cart
+            margin: 0 2%
+            margin-left: 0
+            border: 2px solid #BDBDBD
+            border-radius: 50%
+            padding: 10px 10px 9px 5px
+            width: 50px
+            height: 50px
+            @media screen and (max-width: 1440px)
+                height: 40px
+                width: 40px
+                padding: 0
+                svg
+                    display: block
+                    margin: 0 auto
+                    margin-top: 21%
+                    height: 19px
+                    width: 36px
+            @media screen and (max-width: 1024px)
+                border: none
+                svg
+                    margin-top: 10%
+                    height: 28px
+                    width: 39px
+
+        #profile-button
+            @media screen and (max-width: 1024px)
+                border: none
+                background-color: white
+                svg
+                    fill: #BDBDBD
+                    width: 25px
+                    height: 31px
+                    margin-top: 8%
+
+        .profile
+            min-width: 50px
+            height: 50px
+            border: 2px solid $purple
+            border-radius: 25px
+            background-color: #fff
+            border-radius: 50%
+            padding: 9px 10px 8px 10px
+            cursor: pointer
+            svg
+                margin: 0 auto
+                display: block
+            @media screen and (max-width: 1440px)
+                height: 40px
+                width: 40px
+                padding: 0
+                min-width: 40px
+                svg
+                    display: block
+                    margin: auto auto
+                    margin-top: 26%
+                    height: 30px
+                    width: 20px
+            &:hover
+                background-color: $brown
+                border-color: $blue
+                svg
+                    fill: $blue
+
+            svg
+                fill: $purple
+
+        .profile--loginOn
+            background-color: $brown // Класс для залогиненного пользователя
+            border: 2px solid $brown
+            svg
+                fill: $purple
+
+        .profile--pageOn
+            border: 2px solid $purple // Класс для иконки на страниц пользователя
+
+        .favorite--active
+            background-color: $brown // Класс избранного/корзины в которых что-то есть
+            border: 2px solid $brown
+            position: relative
+            &:hover
+                border: 2px solid $blue
+                svg
+                    path
+                        stroke: $blue
+            &::after
+                width: 13px
+                height: 13px
+                position: absolute
+                content: ""
+                background-color: #EB5757
+                border: 2px solid white
+                border-radius: 50%
+                right: -1px
+                bottom: -5px
+            svg
+                fill: $purple
+                path
+                    stroke: $purple
+            @media screen and (max-width: 1024px)
+                background-color: white
+                border: none
+                &::after
+                    width: 15px
+                    height: 15px
+                    right: 2px
+                    bottom: 4px
+
+        .cart--active
+            background-color: $brown // Класс для иконки странице корзины
+            border: 2px solid $brown
+            position: relative
+            &:hover
+                border: 2px solid $blue
+                svg
+                    path
+                        stroke: $blue
+            &::after
+                width: 13px
+                height: 13px
+                position: absolute
+                content: ""
+                background-color: #EB5757
+                border: 2px solid white
+                border-radius: 50%
+                right: -1px
+                bottom: -5px
+            svg
+                path
+                    stroke: $purple
+            @media screen and (max-width: 1024px)
+                background-color: white
+                border: none
+                &::after
+                    width: 15px
+                    height: 15px
+                    right: -2px
+                    bottom: 2px
+
+        .cart--pageOn
+            border: 2px solid $purple // Класс для иконки странице избранного
+            background-color: $brown
+            @media screen and (max-width: 1024px)
+                border: none
+                background-color: white
+            svg
+                path
+                    stroke: $purple
+
+        .favorite--pageOn
+            border: 2px solid $purple
+            background-color: $brown
+            svg
+                fill: $purple
+                stroke: $purple
+            @media screen and (max-width: 1024px)
+                border: none
+                background-color: white
+
+        .user-nav
+            position: absolute
+            bottom: -312px
+            right: 0
+            padding: 40px 25px
+            width: 300px
+            background: white
+            display: none
+            flex-direction: column
+            gap: 15px
+            box-shadow: -12px 10px 4px 2px rgba(34, 60, 80, 0.17)
+            animation: 0.6s slide
+            overflow: auto
+            @keyframes slide
+                0%
+                    transform: translate(100%,0%)
+                100%
+                    transform: translate(0%, 0%)
+            @media screen and (max-width: 1024px)
+                position: fixed
+                top: 0
+                bottom: 60px
+                width: 100%
+                box-shadow: none
+
+            p
+                font-size: 36px
+            a
+                font-size: 24px
+                color: $purple
+                &:hover
+                    text-decoration: underline
+                @media screen and (max-width: 1024px)
+                    padding: 10px 0
+        .closeUserNav
+            display: flex
+            gap: 20px
+            align-items: center
+            @media screen and (max-width: 1024px)
+                margin-bottom: 20px
+        .closeUserNav__link
+            display: none
+            svg
+                transform: rotate(180deg)
+                width: 20px
+                height: 25px
+            @media screen and (max-width: 1024px)
+                display: block
+        .user-nav--opened
+            display: flex
+
+    .loginOn
+        .cart
+            display: block
+
